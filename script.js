@@ -1,24 +1,41 @@
 $(document).ready(function(){
-   /* for(i = 0; i < 16; i++) {
-  	    for(j = 0; j < 16; j++) {
-  		    $('#grid').append('<div id="div'+ i +'" class="box"/>');
-    	}
-*/
-    var container = $(".container").html("");
-	for (var row = 0; row < 40; row++) {
-		for (var column = 0; column < 40; column++) {
-			container.append( $("<div class='grid'></div>"));
-		}
-	
-	}
 
-   
-	
+	createGrid(40);
+
 	$(".grid").hover(function(){
     	$(this).css("background-color", "#101010");
     	}, function(){
     	$(this).css("background-color", "#404040");
-    });
+	});
+
+	
 
 }); 
+	
 
+function createGrid(gridSize) {   
+    
+    var container = $(".container").html("");
+	for (var row = 0; row < gridSize; row++) {
+		for (var column = 0; column < gridSize; column++) {
+			container.append( $("<div class='grid'></div>").height(600/gridSize).width(600/gridSize))
+			
+		}
+	
+	}
+}
+   	
+	
+
+
+function clearGrid() {
+	var gridSize = prompt("Number of rows/columns?");
+	createGrid(gridSize);
+
+	$(".grid").hover(function(){
+    	$(this).css("background-color", "#101010");  /* Repeating myself here. Not sure how to get it to work after clearing without doubling the code up */
+    	}, function(){
+    	$(this).css("background-color", "#404040");
+	});
+
+}

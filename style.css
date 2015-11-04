@@ -1,7 +1,5 @@
 .grid  {
-    height:15px;
-    width:15px;
-    background-color:#C0C0C0;
+    background-color:#F0F0F0;
     border: 0px;
     float: left;
 
@@ -10,6 +8,11 @@
 .container {
 	width: 600px;
 	height: 600px;
-	margin: 50px auto;
+	margin: 10px auto;
 	border: 1px solid black;
+}
+
+.button-container {
+	text-align:center;
+	margin: 20px;
 }

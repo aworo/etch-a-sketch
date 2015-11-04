@@ -5,13 +5,20 @@ $(document).ready(function(){
     	}
 */
     var container = $(".container").html("");
-	for (var row = 0; row < 16; row++) {
-		for (var column = 0; column < 16; column++) {
+	for (var row = 0; row < 40; row++) {
+		for (var column = 0; column < 40; column++) {
 			container.append( $("<div class='grid'></div>"));
 		}
 	
 	}
 
-    
-});
+   
+	
+	$(".grid").hover(function(){
+    	$(this).css("background-color", "#101010");
+    	}, function(){
+    	$(this).css("background-color", "#404040");
+    });
+
+}); 
 

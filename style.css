@@ -1,14 +1,15 @@
 .grid  {
-    height:25px;
-    width:25px;
-    background-color:#000;
+    height:15px;
+    width:15px;
+    background-color:#C0C0C0;
     border: 0px;
     float: left;
 
 }
 
 .container {
-	width: 400px;
-	height: 400px;
+	width: 600px;
+	height: 600px;
 	margin: 50px auto;
+	border: 1px solid black;
 }

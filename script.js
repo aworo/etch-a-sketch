@@ -23,6 +23,13 @@ function createGrid(gridSize) {
 		}
 	
 	}
+
+	
+	$(".grid").hover(function(){
+    	$(this).css("background-color", "#101010");
+    	}, function(){
+    	$(this).css("background-color", "#404040");
+	});
 }
    	
 	
@@ -32,10 +39,5 @@ function clearGrid() {
 	var gridSize = prompt("Number of rows/columns?");
 	createGrid(gridSize);
 
-	$(".grid").hover(function(){
-    	$(this).css("background-color", "#101010");  /* Repeating myself here. Not sure how to get it to work after clearing without doubling the code up */
-    	}, function(){
-    	$(this).css("background-color", "#404040");
-	});
 
 }
